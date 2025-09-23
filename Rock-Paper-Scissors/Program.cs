@@ -1,4 +1,4 @@
-﻿/* 
+/* 
  * By Deci1337 *
  * My First mini project *
  * https://github.com/Deci1337 *
@@ -23,11 +23,13 @@ namespace rps
             {
                 Choosing choosing = new Choosing();
                 Opponent opponent = new Opponent();
+                string randomTurn = opponent.RandomTurn();
 
                 string chosen = choosing.Selection();
-                DrawSubjects drawSubjects = new DrawSubjects(chosen);
+                DrawSubjects drawSubjects = new DrawSubjects(chosen, randomTurn);
+                // added drawing your choose + random choose (your opponent) with indentation
                 Console.ReadKey();
-                FinishingGame finishingGame = new FinishingGame(chosen, opponent.RandomTurn(), ref Total, ref Wins, ref Loses);
+                FinishingGame finishingGame = new FinishingGame(chosen, randomTurn, ref Total, ref Wins, ref Loses);
                 Console.WriteLine("Total: {2}\nWins : {0}\nLoses:{1}", Wins, Loses, Total);
                 Console.ReadKey(); // Waiting user input
                 Console.Clear();
