@@ -44,12 +44,12 @@ namespace rock_paper_scissors
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.White;
-                drawer(item + "\nPress any button\n", 10);
+                drawer(item + "\nPress any button\n", 17);
                 drawer(randomItem, Console.WindowWidth - 30);
                 Thread.Sleep(400);
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                drawer(item + "\nPress any button\n", 10);
+                drawer(item + "\nPress any button\n", 17);
                 drawer(randomItem, Console.WindowWidth - 30);
                 Thread.Sleep(400);
             }
@@ -144,3 +144,4 @@ namespace rock_paper_scissors
         }
     }
 }
+
